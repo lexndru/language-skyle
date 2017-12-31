@@ -1,0 +1,76 @@
+scopeName: 'source.sky'
+name: 'Skyle'
+fileTypes: [
+  'sky'
+]
+patterns: [
+  {
+    match: '(?i)(title|probe|agent|flags|output) (.+)'
+    name: 'meta.entity.skyle.header'
+    captures:
+      1:
+        name: 'keyword.header.skyle'
+      2:
+        name: 'constant.language.header.skyle'
+  }
+  {
+    match: '(?i)(follow|node|next) (.+)'
+    name: 'meta.entity.skyle.function.all'
+    captures:
+      1:
+        name: 'keyword.function.skyle'
+      2:
+        name: 'value.function.skyle'
+  }
+  {
+    match: '(?i)(glue|exec) (.+)'
+    name: 'meta.entity.skyle.function.text-modifier'
+    captures:
+      1:
+        name: 'keyword.function.dump.skyle'
+      2:
+        name: 'string.interpolated.skyle'
+  }
+  {
+    match: '(?i)(pattern|replace|remove|keep) (.+)'
+    name: 'meta.entity.skyle.function.regexp-modifier'
+    captures:
+      1:
+        name: 'keyword.function.dump.skyle'
+      2:
+        name: 'string.regexp.skyle'
+  }
+  {
+    match: '(?i)(dump|flush) (.+)'
+    name: 'meta.entity.skyle.function.dump'
+    captures:
+      1:
+        name: 'keyword.function.dump.skyle'
+      2:
+        name: 'string.skyle'
+  }
+  {
+    match: '(?i)(save) ([a-zA-Z][\\w]+)\\s?(.+)?'
+    name: 'meta.entity.skyle.function.save'
+    captures:
+      1:
+        name: 'keyword.function.save.skyle'
+      2:
+        name: 'support.variable.skyle'
+      3:
+        name: 'string.value.skyle'
+  }
+  {
+    match: '(?i)(save|flush|dump) ([^a-zA-Z])'
+    name: 'meta.entity.skyle.function.save.invalid'
+    captures:
+      1:
+        name: 'keyword.function.save.skyle'
+      2:
+        name: 'invalid.illegal.skyle'
+  }
+  {
+    match: '^#.*'
+    name: 'meta.comment.skyle'
+  }
+]

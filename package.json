@@ -1,0 +1,16 @@
+{
+  "name": "language-skyle",
+  "main": "./lib/language-skyle",
+  "version": "0.0.1",
+  "description": "Syntax highlight for Skyle",
+  "keywords": [
+      "skyle"
+  ],
+  "repository": "https://github.com/lexndru/language-skyle",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
